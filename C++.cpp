@@ -1,12 +1,13 @@
-# include <iostream>
+
 # include <string>
+# include "TEST1.h"
+# include <iostream>
 using namespace std;
 
 int main()
 {
-    double a[1]={3.456};
-    int i=0;
-    cout << a[0] << endl;
+    int a=10;
+    PRI(a);
     system("pause");
     return 0;
 }
