@@ -4,9 +4,9 @@ using namespace std;
 
 int main()
 {
-    double a=0.81, b=0.41,c=0;
+    double a[1]={3.456};
     int i=0;
-    cout << a/b << endl;
+    cout << a[0] << endl;
     system("pause");
     return 0;
 }
