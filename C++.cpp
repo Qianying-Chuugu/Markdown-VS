@@ -1,13 +1,16 @@
-
 # include <string>
-# include "TEST1.h"
 # include <iostream>
 using namespace std;
 
 int main()
 {
-    int a=10;
-    PRI(a);
-    system("pause");
-    return 0;
+    int *p= new int[10];
+    for(int i=0;i<10;i++)
+    {
+        p[i]=i;
+    }
+    for(int i=0;i<10;i++)
+    {
+        cout<<p[i]<<" ";
+    }
 }
