@@ -1,18 +1,26 @@
 # include <string>
 # include <iostream>
+# include <math.h>
 using namespace std;
 
-int add(int b=10){
-    return b;
-}
+class cirlce{
+    public:
+        int x;
+        int y;
+        int banjing;
+};
 
-int add(int a)
-{
-    return a;
+class point{
+    public:
+        int x;
+        int y;
+    public:
+        void juli(int cir,int poi){
+            double ju = pow(c-poi.x)
+        }
 }
 
 int main()
 {
-    int a=1,b=2;
-    cout << add(a) << endl;
+
 }
