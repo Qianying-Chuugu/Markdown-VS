@@ -4,17 +4,23 @@ using namespace std;
 
 class tree{
     public:
-    tree(int num){
-        cout<< num <<endl;
-        cout<<"你好"<<endl;
+    // tree(const tree &branch){
+    //     a=branch.a;
+    //     b=branch.b;
+    //     cout<<a<<' '<<b<<endl;
+    // }
+    tree(){
+
     }
     public:
     int a;
+    int b;
 };
 
 int main(){
-    int a=1;
-    tree branch1(a);
-    tree branch2 = tree(1);
-    
+    tree branch1;
+    branch1.a=3;
+    branch1.b=7;
+    tree branch2(branch1);
+    cout<< branch2.a<<' '<<branch2.b<<endl;
 }
