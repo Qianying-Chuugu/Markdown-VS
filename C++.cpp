@@ -2,34 +2,39 @@
 #include <string.h>
 using namespace std;
 
-class tree{
+class tree;
 
-    friend void seed(tree &branch);
-
-    private:
+class grass{
+    
+    public:
     int a;
-    int b;
-    int c;
-    static double num;
     public:
-    tree():a(1),b(9),c(8){
-
-    }
-    public:
-    void test1 (){
-        
-       
-        cout<<"yes"<<endl;
-    }
+    void grassmade();
 };
 
-void seed(tree &branch){
-    cout<<branch.a<<" "<<branch.b<<""<<endl;
+class tree{
+
+    friend void grass::grassmade();
+    private:
+    int m;
+    int n;
+    private:
+    void treemade(){
+        cout<<"hello,tree"<<endl;
+    }
+    tree():m(10),n(20){}
+
+};
+
+void grass::grassmade(){
+    tree A;
+    cout<<A.m<<" "<<A.n<<endl;
+    A.treemade();
+
 }
 
 
 int main(){
-    tree branch;
-    seed(branch);
-    
+   grass B;
+   B.grassmade();
 }
