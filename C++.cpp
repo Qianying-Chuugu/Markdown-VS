@@ -2,53 +2,31 @@
 #include <string.h>
 using namespace std;
 
-class tree{
-    friend tree trass(tree &apple,tree &orange);
-    friend ostream& operator<<(ostream &cout,tree const &apple);
-    private:
-    int a;
-    double b;
+class plant {
     public:
-    tree():a(1),b(7.234){}
-    tree& operator++(){
-        a=a+1;
-        b=b+1;
-        return *this;
-    }
-    tree operator++(int){
-        tree linshi = *this;
-        a=a+1;
-        b=b+1;
-        return linshi;
-    }
-    tree& operator=(const tree& dux){
-        this->a=dux.a;
-        this->b=dux.b;
-        return *this;
-    }
-    tree& operator()(int a,double b){
-        this->a+=a;
-        this->b+=b;
-        return *this;
+    int num;
+    public:
+    void putout(){
+        cout<<num<<endl;
     }
 };
 
-tree trass(tree &apple,tree &orange){
-    tree mamboo;
-    mamboo.a=apple.a+orange.a;
-    mamboo.b=apple.b+orange.b;
-    return mamboo;
-}
+class tree1 :virtual public plant{};
 
-ostream& operator<<(ostream &cout,tree const &apple){
-    cout<<apple.a<<" "<<apple.b;
-    return cout;
-}
+class tree2 :virtual public plant{
+    public:
+    string kind;
+    public:
+    void myput(){
+        cout<<kind<<endl;
+    }
+};
+
+class seed :public tree1,public tree2{};
 
 int main(){
-    tree apple,orange;
-    tree mamboo=trass(apple,orange);
-    cout<<mamboo<<endl;
-    mamboo(99,23.73663);
-    cout<<mamboo<<endl;
+    seed one1;
+    one1.num=1;
+    one1.putout();
 }
+
