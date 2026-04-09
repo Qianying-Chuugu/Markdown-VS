@@ -1,33 +1,27 @@
 #include <iostream>
 #include <string.h>
+#include <fstream>
 using namespace std;
 
-class plant {
+class person{
     public:
-    int num;
-    public:
-    virtual void putout(){
-        cout<<num<<"  plant"<<endl;
-    }
+    int age;
+    char name[11];
 };
 
-class tree :virtual public plant{
-    public:
-    string kind;
-    public:
-    void putout(){
-        cout<<kind<<"  tree"<<endl;
-    }
-};
 
-void put1(plant &numb1){
-    numb1.putout();
-}
 
 int main(){
-    tree seed;
-    seed.num=10;
-    seed.kind="你好";
-    put1(seed);
+    // person amen={11,"newajdhw"};
+    // ofstream exm;
+    // exm.open("text1.txt",ios::binary|ios::out) ;
+    // exm.write((char*)&amen,sizeof(amen));
+    // exm.close();
+    person emen;
+    ifstream exm;
+    exm.open("text1.txt",ios::binary|ios::in);
+    exm.read((char*)&emen,sizeof(emen));
+    exm.close();
+    cout<<emen.age<<" "<<emen.name<<endl;
+    
 }
-
