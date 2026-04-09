@@ -6,27 +6,28 @@ class plant {
     public:
     int num;
     public:
-    void putout(){
-        cout<<num<<endl;
+    virtual void putout(){
+        cout<<num<<"  plant"<<endl;
     }
 };
 
-class tree1 :virtual public plant{};
-
-class tree2 :virtual public plant{
+class tree :virtual public plant{
     public:
     string kind;
     public:
-    void myput(){
-        cout<<kind<<endl;
+    void putout(){
+        cout<<kind<<"  tree"<<endl;
     }
 };
 
-class seed :public tree1,public tree2{};
+void put1(plant &numb1){
+    numb1.putout();
+}
 
 int main(){
-    seed one1;
-    one1.num=1;
-    one1.putout();
+    tree seed;
+    seed.num=10;
+    seed.kind="你好";
+    put1(seed);
 }
 
